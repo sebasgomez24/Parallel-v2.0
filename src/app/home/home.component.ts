@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, trigger, state, style, transition, animate, keyframes, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',

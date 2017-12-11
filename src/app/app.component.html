@@ -1,17 +1,25 @@
-<mat-toolbar>
-    <button mat-button routerLink='/'>Parallel</button>
-    <!-- <search [passedQuery]='query'></search> -->
-    <span class="example-spacer"></span>
-    <button mat-button>Sign Up</button>
-    <button mat-button>Login</button>
-</mat-toolbar>
 
+<mat-toolbar>
+	<button mat-button routerLink='/'><span class="brand">PARALLEL</span></button>
+	<!-- <search [passedQuery]='query'></search> -->
+	<span class="example-spacer"></span>
+	<button mat-button routerLink='register'>Sign Up</button>
+	<button mat-button routerLink='login'>Login</button>
+</mat-toolbar>
 
 <div class="main-container">
   <router-outlet></router-outlet>
 </div>
 
-<footer class="container text-center">
-  <hr/>
-  &copy; Parallel
+<footer>
+	<div class="container center">
+		<div class="row">
+			<div class="col-sm-6">
+				&copy;2017 <i>PARALLEL</i>
+			</div>
+			<div class="col-sm-6 text-right">
+				Proudly made in California by <span>Parallel</span>
+			</div>
+		</div>
+	</div>
 </footer>

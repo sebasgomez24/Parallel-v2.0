@@ -1,7 +1,27 @@
+@import '~sass/variables'
+@import '~sass/mixins'
+
+.center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+.center-2
+	position: absolute
+	top: 50%
+	transform: translate(0, -50%)	
+
+.mat-button, .mat-raised-button
+    background-color: $primary
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    font-family: Montserrat
+    font-size: .8em
+
 .bg-1
 	padding-top: 100px
 	background-image: url('/assets/images/parallel-bg.jpg')
-	
 
 .bg-2
 	background-image: url('/assets/images/parallel-bg-1.png')
@@ -10,15 +30,37 @@
 	background-repeat: none
 	position: absolute
 
+.txt-1
+	p
+		color: #b7b7b7
+		font-size: 1.1em
+		font-weight: 600
+		letter-spacing: 1.5px
+		text-align: center
+		position: absolute
+		top: 55%
+		left: 50%
+		transform: translate(-50%, -55%)
+	.app-store-btns
+		position: absolute
+		height: 50px
+		width: 100%
+		top: 65%
+		.small
+			width: 25%
+			img
+				height: 50px
+
+
 .parallax
 	min-height: 100vh
 	width: 100%
 	top: 0
 	background-position: 50% 0px
 	-webkit-background-size: cover
-  	-moz-background-size: cover
-  	-o-background-size: cover
-  	background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
 	
 
 .lower-center
@@ -29,55 +71,107 @@
 	left: 50%
 	transform: translate(-50%, 0)
 
-.banner .col-sm-4:first-of-type
-	padding-right: 0
-	padding-left: 15px
-
-.banner .col-sm-4:last-of-type
-	padding-right: 15px
-
-.banner .col-sm-4
-	padding-right: 0
-	padding-left: 0
-
-.flip-card
-	height: 200px
-
 // .flip-card:hover
 // 	transform: rotateY(180deg)
 
-.card
-	width: 100%
-	height: 100%
-	overflow: hidden
-	backface-visibility: hidden
-	p
-		position: relative
- 		text-align: center
- 		top: 50%
- 		left: 50%
- 		transform: translate(-50%, -50%)
- 		letter-spacing: 2px
- 		font-size: 1.25em
+.handheld
+	background: url('/assets/images/handheld.jpg')
+
+.vr-headset
+	background: url('/assets/images/vr-headset.jpg')
+
+.first-person
+	background: url('/assets/images/first-person.png')
+
+.handheld, .vr-headset, .first-person
+	background-size: cover
 
 // .card .back
 // 	background: #000
 // 	transform: rotateY(180deg)
 
-.card:first-of-type
-	background-image: url('/assets/images/parallel-bg.jpg')
-	-webkit-background-size: cover
-	-moz-background-size: cover
-	-o-background-size: cover
+.parallel-strip-1
+	.cover-card
+		background: #fff
+		opacity: .7
+		height: 100%
+		.flip-card
+			font-size: 1.25em
+			height: 200px
+			font-weight: 900
+			position: relative
+			.card
+				width: 100%
+				height: 100%
+				overflow: hidden
+				backface-visibility: hidden
+				p
+					color: #fff
+					position: relative
+					text-align: center
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					letter-spacing: 2px
+					font-size: 1.25em
+			.front
+				transition: transform .5s linear
+				position: absolute
+			.back
+				background: #333
+				position: absolute
+				h4
+					color: #fff
+				p
+					color: #fff
+					font-size: .8em
+					font-family: 'Raleway'
+		.flip-card:hover
+			.front
+				transform: rotateX(180deg)
+
+
+.present-ar-vr
+	position: relative
+	height: 600px
+	background: url('/assets/images/simple.jpg') no-repeat center center fixed
 	background-size: cover
+	hr
+		height: 1px
+		background: #000
 
-// .card:nth-of-type(2)
-// 	background-image: url('/assets/images/parallel-bg.jpg')
-// 	background-size: cover
-
-// .card:last-of-type
-// 	background-image: url('/assets/images/parallel-bg-1.png')
-// 	background-size: cover
+.parallel-strip-2
+	position: relative
+	height: 300px
+	background: rgba(255,255,255,0.22)
+	background: url('/assets/images/parallel-bg-1.png') no-repeat center center fixed
+	background-size: cover
+	img
+		height: 75px
 
 .banner-card
-	height: 300px
+	position: absolute
+	top: 50%
+
+.experience-design
+	height: 650px
+	position: relative
+	hr
+		height: 1px
+		background: #000
+
+.contact-section
+	position: relative
+	height: 600px
+	background: url('/assets/images/contact.jpg') no-repeat center center fixed
+	background-size: cover
+	color: #fff
+	h2, h4
+		color: #fff
+	p
+		line-height: 1.5
+	.cover-contact
+		background: #333
+		opacity: .7
+		height: 100%
+		width: 100%
