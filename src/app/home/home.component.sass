@@ -2,15 +2,17 @@
 @import '~sass/mixins'
 
 .center
-	position: absolute
-	top: 50%
-	left: 50%
-	transform: translate(-50%, -50%)
+	@include center
 
 .center-2
-	position: absolute
+	position: relative
 	top: 50%
-	transform: translate(0, -50%)	
+	transform: translate(0, -50%)
+
+.center-form
+	position: relative
+	top: 50%
+	transform: translate(0, -50%)
 
 .mat-button, .mat-raised-button
     background-color: $primary
@@ -33,9 +35,9 @@
 .txt-1
 	p
 		color: #b7b7b7
-		font-size: 1.1em
+		font-size: .8em
 		font-weight: 600
-		letter-spacing: 1.5px
+		letter-spacing: 2.5px
 		text-align: center
 		position: absolute
 		top: 55%
@@ -84,7 +86,7 @@
 	background: url('/assets/images/first-person.png')
 
 .handheld, .vr-headset, .first-person
-	background-size: cover
+	@include full-bg
 
 // .card .back
 // 	background: #000
@@ -105,6 +107,7 @@
 				height: 100%
 				overflow: hidden
 				backface-visibility: hidden
+				border-radius: 0
 				p
 					color: #fff
 					position: relative
@@ -133,27 +136,63 @@
 
 .present-ar-vr
 	position: relative
-	height: 600px
+	height: 750px
 	background: url('/assets/images/simple.jpg') no-repeat center center fixed
 	background-size: cover
 	hr
-		height: 1px
-		background: #000
+		background: #333
+	h2
+		color: #555
+		font-size: 1.75em
+		padding: 10px 0
+	p
+		padding-top: 10px
+		font-family: 'Raleway', sans-serif
+		font-weight: 900
+		color: #555
+		span
+			font-family: 'Montserrat', sans-serif
+
+.parallel-strip-2-bg
+	background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, #d1d1d1 100%)
 
 .parallel-strip-2
 	position: relative
-	height: 300px
+	height: 350px
+	background: rgba(255, 255, 255, 0.22)
+	background: url('/assets/images/parallel-bg-1.png') no-repeat center center fixed
+	background-size: cover
+	img
+		height: 75px
+		margin: 25px 0
+	h3
+		letter-spacing: 8px
+		font-weight: 100
+		font-size: 1.25em
+	p
+		font-family: 'Raleway', sans-serif
+		font-size: .8em
+		font-weight: 900
+		color: #777
 
 .banner-card
 	position: absolute
 	top: 50%
 
 .experience-design
-	height: 650px
+	height: 750px
 	position: relative
+	background: #F8F8F8
+	h3
+		letter-spacing: 2px
+		padding: 10px 0
+	p
+		font-family: 'Raleway', sans-serif
+		padding: 0 0 0 25px
+		font-weight: 900
+		color: #777
 	hr
-		height: 1px
-		background: #000
+		background: #333
 
 .contact-section
 	position: relative
@@ -161,12 +200,22 @@
 	background: url('/assets/images/contact.jpg') no-repeat center center fixed
 	background-size: cover
 	color: #fff
-	h2, h4
+	hr
+		background: #fff
+	h2, h4, p
 		color: #fff
+	h4
+		font-family: 'Raleway', sans-serif
+		padding: 10px 0
 	p
 		line-height: 1.5
-	.cover-contact
-		background: #333
-		opacity: .7
-		height: 100%
-		width: 100%
+		font-family: 'Raleway', sans-serif
+
+
+
+
+
+
+
+
+

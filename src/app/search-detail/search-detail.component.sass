@@ -1,0 +1,39 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+.search-detail
+	padding-top: 75px
+	background: url('/assets/images/parallel-bg-light.jpg')
+	@include full-bg
+
+h2
+	font-family: 'Raleway', sans-serif
+	color: $primary
+	margin: 35px 0
+	img
+		height: 1em
+
+.card
+	background: rgba(255,255,255,0.6)
+	color: #777
+	text-align: center
+	h4
+		font-family: 'Raleway', sans-serif
+		color: $accent
+	p
+		font-size: .8em
+	img
+		height: 25px
+		width: 25px
+		margin: 0 auto
+		padding: 5px 0 0 0
+	&:hover
+		transform: scale(1.05)
+
+.smallpadding
+	padding-left: 7px !important
+	padding-right: 7px !important
+
+.accent
+	b
+		color: $accent

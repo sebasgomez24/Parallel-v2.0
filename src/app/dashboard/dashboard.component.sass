@@ -1,0 +1,18 @@
+@import '~sass/variables'
+@import '~sass/mixins'
+
+.nopadding
+	@include nopadding
+
+nav.sidebar
+	border-radius: 0
+	height: 100vh
+	font-family: 'Montserrat', sans-serif
+
+main
+	padding: 75px
+	background: url('/assets/images/parallel-bg-light.jpg')
+	@include full-bg
+	h1
+		color: $primary
+		font-family: 'Montserrat', sans-serif

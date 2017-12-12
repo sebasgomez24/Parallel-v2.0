@@ -1,3 +1,18 @@
-<p>
-  portal-detail works!
-</p>
+<app-dashboard-topnav></app-dashboard-topnav>
+
+<div class="container">
+	<div class="search-detail">
+		<div *ngIf='portal'>
+			<h1>{{ portal.name }}<footer class="blockquote-footer">Some crazy paralleler	 <cite title="Source Title">{{ user }}</cite></footer></h1>
+			<hr/>
+			<img class="card-img-top" src="{{ portal.image}}" alt="{{portal.slug}}" />
+			<div class="card body">
+				<p>{{portal.description}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="comment-section">
+		<app-comments></app-comments>
+		
+	</div>
+</div>

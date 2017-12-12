@@ -1,0 +1,55 @@
+@import '~sass/variables'
+@import '~sass/mixins'
+
+.nopadding
+	@include nopadding 
+.center
+	@include center
+
+.profile-info
+	height: 200px
+	position: relative
+	text-align: center
+	img
+		position: absolute
+		height: 150px
+		left: 50%
+		transform: translate(-50%, 0)
+	h4
+		font-family: 'Raleway', sans-serif
+		color: $accent
+
+.list-group
+	.list-group-item
+		font-family: 'Montserrat', sans-serif
+		font-size: .75em
+		padding: 20px
+		letter-spacing: 1.25px
+		background: transparent
+		border-radius: 0
+		color: $primary
+		border-right: none
+		border-top: 1px solid #f2f2f2
+		border-bottom: 1px solid #f2f2f2
+	.list-group-item.active
+		border-color: transparent !important
+		color: #999
+		.icon-chevron-right
+			display: inline
+	.last
+		color: $accent
+	.icon
+		height: 15px
+	.icon-chevron-right
+		height: 7px
+		float: right
+		margin: 5px 10px
+		display: none
+		&:active
+			display: inline
+	
+
+.affix
+	position: fixed
+	top: 75px
+	width: 16.5%

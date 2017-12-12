@@ -5,12 +5,16 @@ import { DashboardComponent }     from './dashboard/dashboard.component';
 import { HomeComponent }   from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PortalDetailComponent } from './portal-detail/portal-detail.component';
 import { RegisterComponent } from './register/register.component';
+import { SearchDetailComponent } from './search-detail/search-detail.component';
  
 const appRoutes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard/:username', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'portals/:slug', component: PortalDetailComponent },
+  { path: 'search', component: SearchDetailComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+	<h2><img src="/assets/images/icons/home-8x.png">&nbsp;&nbsp;{{title}}</h2>
+	<div class="row">
+	<!-- <div *ngFor='let portal of portalList; let i=index' [ngClass]="{'row': (i+1)%3 === 0}"> -->
+			<div *ngFor='let portal of portalList' class="col-sm-4">
+				<a routerLink="/portals/{{ portal.slug }}">
+					<div class="card mb-3">
+						<br/>
+						<img class="card-img-top" src="/assets/images/icons/aperture-8x.png" alt="card-icon">
+						<div class="card-body">
+							<h4 class="card-title">{{ portal.name }}</h4>
+							<p class="card-text">{{ portal.description }}</p>
+						</div>
+					</div>
+				</a>
+			</div>
+	</div>
+</div>
