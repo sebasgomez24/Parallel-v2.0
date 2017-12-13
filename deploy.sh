@@ -1,0 +1,1 @@
+ng build --prod --output-path /Users/paralleldevelopers/Sebastian/Dev/Parallel-v2.0/backend/src/static/ang/ --watch --output-hashing none

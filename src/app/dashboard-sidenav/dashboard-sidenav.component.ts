@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard-sidenav.component.sass']
 })
 export class DashboardSidenavComponent implements OnInit {
-
+	user = "Sebastian";
   constructor() { }
 
   ngOnInit() {

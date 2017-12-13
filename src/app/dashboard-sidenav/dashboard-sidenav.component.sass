@@ -7,14 +7,16 @@
 	@include center
 
 .profile-info
-	height: 200px
+	height: 250px
 	position: relative
 	text-align: center
-	img
-		position: absolute
+	left: 50%
+	transform: translate(-50%, 0)
+	img	
 		height: 150px
-		left: 50%
-		transform: translate(-50%, 0)
+	p
+		color: $primary
+		padding: 15px 0
 	h4
 		font-family: 'Raleway', sans-serif
 		color: $accent
@@ -52,4 +54,12 @@
 .affix
 	position: fixed
 	top: 75px
-	width: 16.5%
+	width: 16.75%
+
+.modal-sidenav
+	position: absolute
+	bottom: 0
+
+.list-group
+	a:hover
+		background: #e6e6e6

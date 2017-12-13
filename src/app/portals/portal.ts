@@ -1,6 +1,6 @@
 export class PortalItem {
-	name:string
 	slug:string
-	image:string
+	name:string
+	image?:string
 	description?:string
 }

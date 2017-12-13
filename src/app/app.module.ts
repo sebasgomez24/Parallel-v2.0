@@ -8,15 +8,19 @@ import { NgModule } from '@angular/core';
 
 import { MatButtonModule, MatToolbarModule } from '@angular/material';
 
+import { AccountComponent } from './account/account.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { CommentsComponent } from './comments/comments.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardSidenavComponent } from './dashboard-sidenav/dashboard-sidenav.component';
 import { DashboardTopnavComponent } from './dashboard-topnav/dashboard-topnav.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MessageDetailComponent } from './message-detail/message-detail.component';
+import { MessageListComponent } from './message-list/message-list.component';
 import { NavComponent } from './nav/nav.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
@@ -26,11 +30,16 @@ import { PortalDetailComponent } from './portal-detail/portal-detail.component';
 import { PortalListComponent } from './portal-list/portal-list.component';
 
 import * as $ from 'jquery';
-import { CommentsComponent } from './comments/comments.component';
+
+
+
+
 
 @NgModule({
   declarations: [
+    AccountComponent,
     AppComponent,
+    CommentsComponent,
     ContactFormComponent,
     DashboardComponent,
     DashboardSidenavComponent,
@@ -45,7 +54,10 @@ import { CommentsComponent } from './comments/comments.component';
     PortalDetailComponent,
     PortalListComponent,
     RegisterComponent,
-    CommentsComponent,
+    
+    MessageListComponent,
+    MessageDetailComponent,
+    
     // third party
     // SmoothScrollToDirective,
     // SmoothScrollDirective,

@@ -1,4 +1,9 @@
 <form #searchForm='ngForm' class="form-inline my-2 my-lg-0 mr" (ngSubmit)='submitSearch($event, searchForm)'>
-	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name='q' [(ngModel)]='searchQuery'>
-	<button mat-button type="submit">Search</button>
+	<div class="input-group">
+		<span class="input-group-addon" id="basic-addon1"><img src="/assets/images/icons/magnifying-glass-8x.png"></span>
+		<input type="text" class="form-control" type="search" placeholder="Search..." aria-label="Search" name='q' [(ngModel)]='searchQuery'>
+		<button mat-button type="submit">Search</button>
+	</div>	
 </form>
+
+

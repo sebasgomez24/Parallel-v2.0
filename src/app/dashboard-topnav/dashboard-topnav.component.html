@@ -1,25 +1,71 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <button mat-button routerLink='/dashboard'><img src="/assets/images/parallel-icon.png" width="30" height="30" class="d-inline-block align-middle" alt=""><span class="brand">&nbsp;Parallel Dashboard 2.0</span></button>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+	<button mat-button routerLink='/dashboard/{{ username }}'><img src="/assets/images/parallel-icon.png" width="30" height="30" class="d-inline-block align-middle" alt=""><span class="brand">&nbsp;Parallel Dashboard 2.0</span></button>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-  	
-    <ul class="navbar-nav mr-auto dashboard-material-nav">     	
-      
-      <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Settings</a>
-          <a class="dropdown-item" href="#">Help</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Logout</a>
-        </div>
-      </li> -->
-    </ul>
-    <search [passedQuery]='query'></search>
-  </div>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	
+		<ul class="navbar-nav mr-auto dashboard-material-nav">
+			<div class="modal-sidenav">
+				
+				<div>
+					<button type="button" mat-button data-toggle="modal" data-target="#exampleModal">
+						Add New Portal
+					</button>
+    			</div>
+
+				
+			</div>
+			<!-- <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="#">Settings</a>
+					<a class="dropdown-item" href="#">Help</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" href="#">Logout</a>
+				</div>
+			</li> -->
+		</ul>
+		<search [passedQuery]='query'></search>
+	</div>
 </nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">New Portal</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+
+			<form #newPortalForm='ngForm' (ngSubmit)='newPortal($event, newPortalForm)'>
+				<div class="modal-body">
+					<div class="form-group">
+						<input class="form-control form-control-sm" type="text" placeholder="Portal Name" name="name" [(ngModel)]='addName' required>
+					</div>
+					<div class="form-group">
+						<input class="form-control form-control-sm" type="text" placeholder="Description" name="description" [(ngModel)]='addDescription'>
+					</div>
+					<div class="form-group">
+						<div class="upload-btn-wrapper">
+							<button class="btn">Upload Portal</button>
+							<input type="file" name="myfile" />
+						</div>
+						<small id="portalHelp" class="form-text text-muted">Adding Portal Files Coming Soon (Add image instead!)</small>
+					</div>  
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" mat-button data-dismiss="modal">Close</button>
+					<button type="submit" mat-button>Add Portal</button>
+				</div>
+			</form>
+
+		</div>
+	</div>
+</div>

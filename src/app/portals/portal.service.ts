@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-const endpoint = 'assets/json/portals.json'
+const endpoint = '/assets/json/portals.json'
 
 @Injectable()
 export class PortalService {
