@@ -3,8 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { PortalItem } from '../portals/portal';
 import { PortalService } from '../portals/portal.service';
 
-
-
 @Component({
   selector: 'app-portal-detail',
   templateUrl: './portal-detail.component.html',
@@ -12,10 +10,13 @@ import { PortalService } from '../portals/portal.service';
   providers: [PortalService]
 })
 export class PortalDetailComponent implements OnInit, OnDestroy {
-	private req:any;
+	
+  title = 'Video Detail';
+  
+  private req:any;
 	private routeSub:any;
-	title = 'Video Detail';
-	slug:string;
+	
+  slug:string;
 	portal:PortalItem;
 
   constructor(private route: ActivatedRoute, private _portal:PortalService) { }

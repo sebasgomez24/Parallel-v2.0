@@ -14,7 +14,7 @@ import { MessageDetailComponent } from './message-detail/message-detail.componen
 const appRoutes: Routes = [
   { path: 'dashboard/:username', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'message', component: MessageDetailComponent },
+  { path: 'messages/:id', component: MessageDetailComponent },
   { path: 'portals/:slug', component: PortalDetailComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'search', component: SearchDetailComponent },

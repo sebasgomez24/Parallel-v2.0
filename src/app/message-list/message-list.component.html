@@ -1,12 +1,13 @@
-<div class="container-fluid">
+<div class="container-fluid smallscreen">
 	<h2><img src="/assets/images/icons/chat-8x.png">&nbsp;&nbsp;{{title}}</h2>
+
 	<div class="row">
-		<div class="col-sm-6">
-			<a routerLink='/message'>
+		<div *ngFor="let message of messageList" class="col-sm-12 col-lg-6">
+			<a routerLink='/messages/{{ message.id }}'>
 				<div class="card">
 			  		<div class="card-body">
-			  	  		<h4 class="card-title">Card title <img src="/assets/images/icons/check-8x.png"></h4>
-    					<p class="card-text">Some quick example ...</p>
+			  	  		<h4 class="card-title"><small style="font-size: .6em;">FROM:</small> {{ message.from }}<img *ngIf="message.seen == true" src="/assets/images/icons/check-8x.png"></h4>
+    					<p class="card-text">{{ message.message | slice:0:20 }}...</p>
 			  		</div>
 				</div>
 			</a>

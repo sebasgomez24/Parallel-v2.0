@@ -14,6 +14,7 @@ export class SearchDetailComponent implements OnInit, OnDestroy{
     private req: any;
     query: string;
     portalList: [PortalItem];
+    
   constructor(private route:ActivatedRoute, private _portal:PortalService) { }
 
   ngOnInit() {

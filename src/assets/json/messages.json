@@ -1,0 +1,16 @@
+[
+	{
+		"id": 0,
+		"from": "Sebastian",
+		"to": "Sebas",
+		"message": "This is a new message for testing",
+		"seen": false
+	},
+	{
+		"id": 1,
+		"from": "Test",
+		"to": "Test2",
+		"message": "New message new message new message new message",
+		"seen": false
+	}
+]

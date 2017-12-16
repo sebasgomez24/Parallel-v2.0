@@ -3,11 +3,11 @@
 <div class="full-bg">
 	<div class="container small">
 		<div class="message-detail">
-			<div >
+			<div *ngIf='message'>
 				<p>To: {{ message.from }}</p>
 				<hr/>
 				<small><p>4 months ago</p></small>
-				<p>{{ message.contents }}</p>
+				<p>{{ message.message }}</p>
 			</div>
 		</div>
 	</div>
